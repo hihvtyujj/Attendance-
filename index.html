@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Attendance Tracker</h1>
+
+        <!-- Upper Part: Input and Table -->
+        <div class="attendance-form">
+            <label for="student-name">Student Name:</label>
+            <input type="text" id="student-name" placeholder="Enter student name">
+            <button onclick="markAttendance()">Mark Attendance</button>
+        </div>
+
+        <div class="attendance-list">
+            <h2>Attendance Records</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Student Name</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="attendance-table">
+                    <!-- Attendance records will be added here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Lower Part: Buttons for Share and Download -->
+        <div class="action-buttons">
+            <button onclick="shareAttendance()">Share Attendance</button>
+            <button onclick="downloadAttendanceCSV()">Download Attendance as CSV</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
